@@ -10,28 +10,22 @@ namespace ConsoleSnake
         static void Main(string[] args)
         {
             //начало координат в левом верхнем углу, ось х идет слева направо, ось у идет сверху вниз
+
+            Point p1 = new Point(); // создаем новый экземпляр класса Point (объект) и инициализируем его переменные нашими значениями
+            p1.x = 1;
+            p1.y = 3;
+            p1.sym = '*';
+
+            p1.Draw();
+
+            Point p2 = new Point(); // второй объект из класса Point 
+            p2.x = 4;
+            p2.y = 7;
+            p2.sym = '#';
+
+            p2.Draw();
             
-            int x1 = 1; //координаты первой точки
-            int y1 = 3;
-            char sym1 = '*';
-
-            Draw(x1, y1, sym1);
-
-            int x2 = 4; // координаты второй точки
-            int y2 = 7;
-            char sym2 = '#';
-
-            Draw(x2, y2, sym2);
-
             Console.ReadLine();
-        }
-
-        static void Draw(int x, int y, char sym)
-        // метод ничего не возвращает, принимает координаты и тип символа, выводит их на экран
-                {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
-                }
-        
+        }       
     }
 }
