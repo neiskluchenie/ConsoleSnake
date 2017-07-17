@@ -15,10 +15,17 @@ namespace ConsoleSnake
         public int y;
         public char sym;
 
+        public Point(int _x, int _y, char _sym) //пользовательский конструктор
+        {
+            x = _x;
+            y = _y;
+            sym = _sym;
+        }
+
         public void Draw() // метод берет переданные в этот класс переменные. Видимость полей и невидимость локальных переменных
-            {
-                Console.SetCursorPosition(x, y);
-                Console.Write(sym);
-            }
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(sym);
+        }
     }
 }
