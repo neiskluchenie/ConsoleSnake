@@ -5,26 +5,26 @@ using System.Text;
 
 namespace ConsoleSnake
 {
-    class HorizontalLine
+    class VerticalLine
     {
         List<Point> plist;
 
-        public HorizontalLine(int xLeft, int xRight, int y, char sym)// левая точка, правая, позиция по у, символ
-        {
+        public VerticalLine(int yUp, int yDown, int x, char sym) //высшая точка, нижняя точка, позиция по х, символ
+        { 
             plist = new List<Point>(); // добавляем в список экземпляры Point от первого до последнего координата
-            for (int x = xLeft; x <= xRight; x++)
+            for (int y = yUp; y <= yDown; y++)
             {
                 Point p = new Point(x,y,sym);
                 plist.Add(p);
-            }
-            
+            }  
         }
-        public void DrawLine() // выводим этот список на экран
+
+        public void DrawLine()  // выводим этот список на экран
         {
             foreach (Point p in plist)
             {
                 p.DrawPoint();
             }
-        }
+        }    
     }
 }

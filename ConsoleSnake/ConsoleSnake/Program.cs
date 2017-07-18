@@ -21,7 +21,9 @@ namespace ConsoleSnake
 
             HorizontalLine line = new HorizontalLine(1,10,8,'+');
             line.DrawLine();
-                       
+
+            VerticalLine line2 = new VerticalLine(1, 7, 12, '-');
+            line2.DrawLine();
             //задержка
             Console.ReadLine();
         }
