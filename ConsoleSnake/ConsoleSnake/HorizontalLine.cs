@@ -5,10 +5,8 @@ using System.Text;
 
 namespace ConsoleSnake
 {
-    class HorizontalLine
+    class HorizontalLine : Figure
     {
-        List<Point> plist;
-
         public HorizontalLine(int xLeft, int xRight, int y, char sym)// левая точка, правая, позиция по у, символ
         {
             plist = new List<Point>(); // добавляем в список экземпляры Point от первого до последнего координата
@@ -19,12 +17,6 @@ namespace ConsoleSnake
             }
             
         }
-        public void DrawLine() // выводим этот список на экран
-        {
-            foreach (Point p in plist)
-            {
-                p.DrawPoint();
-            }
-        }
+      
     }
 }

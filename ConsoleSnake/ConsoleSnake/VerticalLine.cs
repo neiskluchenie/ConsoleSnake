@@ -5,10 +5,8 @@ using System.Text;
 
 namespace ConsoleSnake
 {
-    class VerticalLine
+    class VerticalLine : Figure // здесь мы говорим, что наш класс является наследуемым от класса Фигура, и может использовать его функционал
     {
-        List<Point> plist;
-
         public VerticalLine(int yUp, int yDown, int x, char sym) //высшая точка, нижняя точка, позиция по х, символ
         { 
             plist = new List<Point>(); // добавляем в список экземпляры Point от первого до последнего координата
@@ -17,14 +15,6 @@ namespace ConsoleSnake
                 Point p = new Point(x,y,sym);
                 plist.Add(p);
             }  
-        }
-
-        public void DrawLine()  // выводим этот список на экран
-        {
-            foreach (Point p in plist)
-            {
-                p.DrawPoint();
-            }
-        }    
+        }       
     }
 }

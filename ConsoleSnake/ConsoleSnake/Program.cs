@@ -13,17 +13,25 @@ namespace ConsoleSnake
             // ctrl+e,c = закомментировать несколько строк сразу
             // ctrl+k+d = выровнять код
 
-            Point p1 = new Point(1, 3, '*'); // создаем новый экземпляр класса Point (объект) и инициализируем его переменные нашими значениями
-            p1.DrawPoint();
+            Console.SetBufferSize(80, 25); // задает параметры окна (ширина, высота) и убирает возможность прокрутки
 
+            // отрисовка рамочки
+
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '+');
+            VerticalLine leftLine = new VerticalLine(0, 24, 0, '+');
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, '+');
+            upLine.DrawLine();
+            downLine.DrawLine();
+            leftLine.DrawLine();
+            rightLine.DrawLine();
+            
+            // ставим точку 
+           
             Point p2 = new Point(4, 7, '#'); // второй объект из класса Point 
             p2.DrawPoint();
 
-            HorizontalLine line = new HorizontalLine(1,10,8,'+');
-            line.DrawLine();
 
-            VerticalLine line2 = new VerticalLine(1, 7, 12, '-');
-            line2.DrawLine();
             //задержка
             Console.ReadLine();
         }
