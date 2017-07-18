@@ -22,7 +22,7 @@ namespace ConsoleSnake
             sym = _sym;
         }
 
-        public void Draw() // метод берет переданные в этот класс переменные. Видимость полей и невидимость локальных переменных
+        public void DrawPoint() // метод берет переданные в этот класс переменные. Видимость полей и невидимость локальных переменных
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);

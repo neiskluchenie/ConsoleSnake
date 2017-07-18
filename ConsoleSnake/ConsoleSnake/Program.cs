@@ -14,11 +14,13 @@ namespace ConsoleSnake
             // ctrl+k+d = выровнять код
 
             Point p1 = new Point(1, 3, '*'); // создаем новый экземпляр класса Point (объект) и инициализируем его переменные нашими значениями
-            p1.Draw();
+            p1.DrawPoint();
 
             Point p2 = new Point(4, 7, '#'); // второй объект из класса Point 
-            p2.Draw();
+            p2.DrawPoint();
 
+            HorizontalLine line = new HorizontalLine(1,10,8,'+');
+            line.DrawLine();
                        
             //задержка
             Console.ReadLine();
